@@ -9,16 +9,24 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { AppComponent } from './app.component';
-
 import 'hammerjs';
-import { MenuComponent } from './menu/menu.component';
-import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 import { DishService } from './services/dish.service';
 
+import { AppComponent } from './app.component';
+import { MenuComponent } from './menu/menu.component';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
 @NgModule({
-  declarations: [AppComponent, MenuComponent, DishdetailComponent],
+  declarations: [
+    AppComponent,
+    MenuComponent,
+    DishdetailComponent,
+    HeaderComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
