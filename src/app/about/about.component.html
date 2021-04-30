@@ -77,6 +77,9 @@
         <mat-card-subtitle>{{leader.description}}</mat-card-subtitle>
       </mat-card-header>
     </mat-card>
+    <div [hidden]="leaders">
+      <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
     <!-- <mat-list *ngIf="leaders">
       <mat-list-item *ngFor="let leader of leaders">
         <img mat-list-avatar src="{{ leader.image }}" alt="{{ leader.name }}" />
