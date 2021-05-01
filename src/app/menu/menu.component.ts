@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
 
   constructor(
     private dishService: DishService,
-    @Inject('BaseURL') private BaseURL
+    @Inject('BaseURL') private baseURL
   ) {
   }
 

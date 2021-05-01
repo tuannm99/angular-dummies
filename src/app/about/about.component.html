@@ -71,7 +71,7 @@
     <h2>Corporate Leadership</h2>
     <mat-card *ngIf="leaders">
       <mat-card-header *ngFor="let leader of leaders">
-        <img mat-card-avatar  src="{{ leader.image }}" alt="{{ leader.name }}" />
+        <img mat-card-avatar  src="{{ baseURL + leader.image }}" alt="{{ leader.name }}" />
         <mat-card-title>{{leader.name}} {{leader.abbr}}</mat-card-title>
         <mat-card-subtitle>{{leader.designation}}</mat-card-subtitle>
         <mat-card-subtitle>{{leader.description}}</mat-card-subtitle>
