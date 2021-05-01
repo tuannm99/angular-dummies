@@ -32,9 +32,13 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { baseURL } from './shared/baseurl';
+
+import { PromotionService } from './services/promotion.service';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,7 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     AppRoutingModule,
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
@@ -69,7 +74,12 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [DishService, LeaderService],
+  providers: [
+    DishService,
+    PromotionService,
+    LeaderService,
+    { provide: 'BaseURL', useValue: baseURL },
+  ],
   bootstrap: [AppComponent],
   entryComponents: [LoginComponent],
 })
