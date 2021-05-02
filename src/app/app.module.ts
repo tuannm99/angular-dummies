@@ -23,6 +23,8 @@ import 'hammerjs';
 
 import { DishService } from './services/dish.service';
 import { LeaderService } from './services/leader.service';
+import { PromotionService } from './services/promotion.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -37,8 +39,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
-
-import { PromotionService } from './services/promotion.service';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { PromotionService } from './services/promotion.service';
     AboutComponent,
     ContactComponent,
     LoginComponent,
+    HighlightDirective,
   ],
   imports: [
     AppRoutingModule,
@@ -78,6 +80,7 @@ import { PromotionService } from './services/promotion.service';
     DishService,
     PromotionService,
     LeaderService,
+    ProcessHTTPMsgService,
     { provide: 'BaseURL', useValue: baseURL },
   ],
   bootstrap: [AppComponent],
