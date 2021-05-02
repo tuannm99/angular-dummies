@@ -81,7 +81,7 @@ export class ContactComponent implements OnInit {
       this.onValueChanged(data)
     );
 
-    this.onValueChanged(); // (re)set validation messages now
+    this.onValueChanged();
   }
 
   onSubmit() {
